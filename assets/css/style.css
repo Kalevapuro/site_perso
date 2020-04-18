@@ -1,0 +1,27 @@
+/* BODY */
+body{
+    color: #3F4253;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* HEADER */
+.header {
+    background-color: #3F4253;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.header__logo{
+    max-height: 10rem;
+    width: auto;
+}
+
+.header__name{
+    margin-top: 0;
+}
