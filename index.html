@@ -24,8 +24,8 @@
     </header>
     <main class="content">
         <!--ARTICLE-->
-        <div class="content__article">
-            <div class="article__main">
+        <div class="article__wrapper">
+            <div class="article__main article--intro">
                 <h3 class="article__title">A propos</h3>
                 <h4 class="article__subtitle">Quelques mots sur moi</h4>
                 <div class="article__image">
@@ -41,19 +41,24 @@
         </div>
         <!--/ARTICLE-->
         <!--ARTICLE-->
-        <div class="content__article article--darker">
-            <div class="article__main">
+        <div class="article__wrapper">
+            <div class="article__main article--skill">
+                <div class="skill__icon">
+                    <img src="/assets/images/icon_gear.png" alt="engrenage" class="skill__icon--img">
+                </div>
                 <h3 class="article__title">Compétences</h3>
                 <h4 class="article__subtitle">Il y a toujours quelque chose à apprendre</h4>
-                <div class="article__image">
-                    <img src="" alt="photo Jérémy Boubal">
+                <div class="skill__content">
+                    <h5 class="skill__title">Back-end</h5>
+                    <div class="skill__wrapper">
+                        <ul class="skill__list">
+                            <li class="skill__list--item">PHP / MySQL</li>
+                            <li class="skill__list--item">Architecture POO/MVC</li>
+                            <li class="skill__list--item">Framework Symfony</li>
+                            <li class="skill__list--item">Environnement Linux</li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="article__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id praesentium repellat voluptates
-                    molestiae cupiditate. Beatae neque architecto cumque dolorem optio distinctio error, illum odio
-                    dolor quae vitae ipsum, at ducimus dolores suscipit totam reprehenderit, possimus repudiandae itaque
-                    maiores magni blanditiis eos sequi corporis. Ex obcaecati ipsam rerum temporibus, natus harum.
-                </p>
             </div>
         </div>
         <!--/ARTICLE-->

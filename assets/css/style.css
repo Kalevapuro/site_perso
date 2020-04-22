@@ -3,6 +3,15 @@ body{
     color: #3F4253;
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    background-image: url('/assets/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+}
+
+h4{
+    font-style: italic;
 }
 
 /* HEADER */
@@ -28,25 +37,53 @@ body{
 
 /*ARTICLE */
 
-.content__article{
+
+.article__wrapper{
+    margin: 2em 0;
+}
+
+.article__main{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 2em;
+    background-color: white;
+    width: 80%;
+    margin: 1.5em auto;
+    padding-bottom: 1.5em;
+    border-radius: 5px;
 }
 
 .article__image img{
-    max-width: 50%;
+    max-width: 10em;
     height: auto;
-}
-
-.article--darker{
-    background-color: #F4F4F4;
 }
 
 .article__text{
     width: 80%;
     text-align: justify;
     margin: 1em auto;
+}
+
+
+/* SKILL SECTION */
+
+.article--skill{
+    
+    background-color: #F4F4F4;
+}
+
+.skill__icon{
+    z-index: 1;
+    margin: -3em 35% 1em 35%;
+    background-color: #3F4253;
+    width: 15%;
+    padding: 1em 2em;
+    border-radius: 2em;
+    border: 5px solid rgba(255, 255, 255, .5);
+}
+
+.skill__icon--img{
+    width: 100%;
+    height: 100%;
 }
