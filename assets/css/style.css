@@ -10,8 +10,14 @@ body{
     background-attachment: fixed;
 }
 
+h3{
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
 h4{
     font-style: italic;
+    margin-top: 0;
 }
 
 /* HEADER */
@@ -35,7 +41,7 @@ h4{
     margin-top: 0;
 }
 
-/*ARTICLE */
+/* ARTICLE ( SECTION ) */
 
 
 .article__wrapper{
@@ -49,7 +55,7 @@ h4{
     text-align: center;
     background-color: white;
     width: 80%;
-    margin: 1.5em auto;
+    margin: 1.5em auto 4em auto;
     padding-bottom: 1.5em;
     border-radius: 5px;
 }
@@ -73,17 +79,65 @@ h4{
     background-color: #F4F4F4;
 }
 
-.skill__icon{
-    z-index: 1;
-    margin: -3em 35% 1em 35%;
-    background-color: #3F4253;
-    width: 15%;
-    padding: 1em 2em;
-    border-radius: 2em;
-    border: 5px solid rgba(255, 255, 255, .5);
+.skill__content{
+    margin: 2em auto;
+    width: 80%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: white;
+    border-radius: 0.5em;
 }
+
+.skill__icon{
+    border: 0.2em solid #F4F4F4;
+    border-radius: 1em;
+    padding: 0.3em;
+    margin: -1.5em auto 2em auto;
+    width: 25%;
+}
+
+.icon--back, .content--back{
+
+    background-color: #3F4253;
+}
+
+.icon--back > .skill__icon--img{
+ width: 80%;
+ height: auto;
+}
+
+.icon--front, .content--front{
+    background-color: #038C94;
+}
+
+.icon--front{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.icon--extra, .content--extra{
+    background-color: #4B5443;
+}
+
+.icon--extra > .skill__icon--img{
+    width: 80%;
+    height: auto;
+   }
 
 .skill__icon--img{
     width: 100%;
     height: 100%;
+}
+
+.skill__title{
+    font-size: 1em;
+}
+
+.skill__list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill__list--item{
+    margin-bottom: 0.3em;
 }
