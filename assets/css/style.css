@@ -3,7 +3,7 @@ body{
     color: #3F4253;
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-image: url('/assets/images/background.jpg');
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -18,6 +18,11 @@ h3{
 h4{
     font-style: italic;
     margin-top: 0;
+}
+
+h5{
+    font-size: 1em;
+    margin: 0.2em auto;
 }
 
 /* HEADER */
@@ -54,7 +59,7 @@ h4{
     align-items: center;
     text-align: center;
     background-color: white;
-    width: 80%;
+    width: 85%;
     margin: 1.5em auto 4em auto;
     padding-bottom: 1.5em;
     border-radius: 5px;
@@ -140,4 +145,24 @@ h4{
 
 .skill__list--item{
     margin-bottom: 0.3em;
+}
+
+/* EXP SECTION */
+
+.exp__header{
+    background-color: rgb(37, 39, 49);
+    border-bottom: 3px solid #3F4253;
+    color: #F4F4F4;
+}
+
+.exp__header{
+    position: relative;
+    padding-top: 0.1em;
+}
+
+.exp__collapse{
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    top: 40%;
 }
