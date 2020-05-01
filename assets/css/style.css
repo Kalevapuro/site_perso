@@ -25,7 +25,13 @@ h5{
     margin: 0.2em auto;
 }
 
+h6{
+    font-size: 1em;
+    margin: 0.2em auto;
+}
+
 /* HEADER */
+
 .header {
     background-color: #3F4253;
     color: #F4F4F4;
@@ -34,16 +40,11 @@ h5{
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding-bottom: 1em;
+    padding: 0.7em;
 }
 
-.header__logo{
-    max-height: 10rem;
-    width: auto;
-}
-
-.header__name{
-    margin-top: 0;
+.header__name, .header__job{
+    margin: 0.1em auto;
 }
 
 /* ARTICLE ( SECTION ) */
@@ -59,7 +60,7 @@ h5{
     align-items: center;
     text-align: center;
     background-color: #F4F4F4;
-    width: 85%;
+    width: 100%;
     margin: 1.5em auto 4em auto;
     padding-bottom: 1.5em;
     border-radius: 5px;
@@ -74,6 +75,10 @@ h5{
     width: 80%;
     text-align: justify;
     margin: 1em auto;
+}
+
+.article__subtitle{
+    margin-bottom: 3em;
 }
 
 
@@ -160,7 +165,7 @@ h5{
     padding-top: 0.1em;
 }
 
-.exp__collapse{
+.collapse--exp{
     display: inline-block;
     position: absolute;
     right: 1em;
@@ -170,23 +175,67 @@ h5{
 
 /* EXPERIENCES */
 
+.article__companies{
+    position: relative;
+    margin: 1em 0.3em 1em 0.5em;
+    border-left: 3px solid #3F4253;
+}
+
+.article__companies::before{
+    position: absolute;
+    content: "";
+    left: -6px;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    border-top: 3px solid #3F4253;
+    border-left: 3px solid #3F4253;
+}
 .company__experience{
     position: relative;
-    margin-top: 0;
-    margin-left: 0.3em;
-    border-left: 3px solid #3F4253;
+    margin: 2em auto 3em auto;
 }
 
 .company__experience::before{
     position: absolute;
     content: "";
     left: -6px;
-    top: 1px;
+    top: 5px;
     width: 10px;
     height: 10px;
     transform: rotate(45deg);
-    background-color: #3F4253;
+    background-color: #4B5443;
 }
+
+.experience__time{
+    text-align: left;
+    padding-left: 1em;
+    margin-bottom: 3em;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.experience__list{
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.experience__item{
+    margin-bottom: 1em;
+    text-align: justify;
+    padding: 0 0.3em
+}
+
+.experience__company, .experience__position{
+
+    color: white;
+    background-color: #3F4253;
+    margin: 0 auto;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
 
 /* FOOTER */
 
@@ -200,3 +249,39 @@ h5{
     text-align: center;
     padding-bottom: 1em;
 }
+
+.contact__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.contact__item__link:hover{
+    text-decoration: underline;
+}
+
+.contact__item__pic{
+    height: 60px;
+    width: auto;
+}
+
+.contact__item__link{
+    text-decoration: none;
+}
+
+.link--phone{
+    color: #6663FF;
+}
+
+.link--mail{
+ color: #63C7C2;
+}
+
+.link--geo{
+    color: #FD6A76;
+}
+
+
+
