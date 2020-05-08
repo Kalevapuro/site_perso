@@ -12,8 +12,24 @@
 
 <body>
     <header class="header">
-        <h1 class="header__name"> Jérémy Boubal</h1>
-        <h2 class="header__job">Développeur Web</h2>
+
+        <div class="header__title">
+            <div class="header__content">
+                <h1 class="header__name"> Jérémy Boubal</h1>
+                <h2 class="header__job">Développeur Web</h2>
+            </div>
+        </div>
+
+        <div class="header__socials">
+            <a href="https://github.com/Jeremybbl" target="_blank"><img src="assets/images/icon_github.png"
+                    class="socials__item"></img></a>
+            <a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my+boubal/" target="_blank"><img
+                    src="assets/images/icon_linkedin.png" class="socials__item"></img></a>
+            <a href="" target="_blank"><img src="assets/images/icon_twitter.png" class="socials__item"></img></a>
+        </div>
+        <div class="header__anchor">
+            <a href="#footer" class="anchor__link">me contacter</a>
+        </div>
     </header>
 
     <main class="content">
@@ -110,20 +126,26 @@
             <div class="article__main article--skill">
                 <h3 class="article__title">Compétences</h3>
                 <h4 class="article__subtitle">Une liste qui ne demande qu'à s'allonger</h4>
-                <div class="skill__wrapper">
+                <div class="skills__wrapper">
                     <!-- SKILL-->
                     <div class="skill__content content--back">
                         <div class="skill__icon icon--back">
                             <img src="assets/images/icon_gear.png" alt="engrenage" class="skill__icon--img">
                         </div>
                         <h5 class="skill__title">Back-end</h5>
-                        <div class="skill__wrapper">
+                        <div class="skill__content__wrapper">
                             <ul class="skill__list">
                                 <li class="skill__list--item">PHP / MySQL</li>
                                 <li class="skill__list--item">Architecture POO/MVC</li>
                                 <li class="skill__list--item">Framework Symfony</li>
                                 <li class="skill__list--item">Environnement Linux</li>
                             </ul>
+                            <div class="skill__list__icons">
+                                <img src="assets/images/icon_symfony.png" class="skill__icon--item" alt="logo symfony">
+                                <img src="assets/images/icon_php.png" class="skill__icon--item" alt="logo php">
+                                <img src="assets/images/icon_MySQL.png" class="skill__icon--item" alt="logo mySQL">
+                                <img src="assets/images/icon_linux.png" class="skill__icon--item" alt="logo Linux">
+                            </div>
                         </div>
                     </div>
                     <!-- /SKILL-->
@@ -133,12 +155,18 @@
                             <img src="assets/images/icon_screen.png" alt="écran" class="skill__icon--img">
                         </div>
                         <h5 class="skill__title">Front-end</h5>
-                        <div class="skill__wrapper">
+                        <div class="skill__content__wrapper">
                             <ul class="skill__list">
                                 <li class="skill__list--item">HTML5 / CSS3</li>
                                 <li class="skill__list--item">Javascript</li>
                                 <li class="skill__list--item">From Scratch / Bootstrap</li>
                             </ul>
+                            <div class="skill__list__icons">
+                                <img src="assets/images/icon_html.png" class="skill__icon--item" alt="logo html">
+                                <img src="assets/images/icon_css.png" class="skill__icon--item" alt="logo css">
+                                <img src="assets/images/icon_js.png" class="skill__icon--item" alt="logo Javascript">
+                                <img src="assets/images/icon_bootstrap.png" class="skill__icon--item" alt="logo Bootstrap">
+                            </div>
                         </div>
                     </div>
                     <!-- /SKILL-->
@@ -148,12 +176,20 @@
                             <img src="assets/images/icon_plus.png" alt="engrenage" class="skill__icon--img">
                         </div>
                         <h5 class="skill__title">Extra</h5>
-                        <div class="skill__wrapper">
+                        <div class="skill__content__wrapper">
                             <ul class="skill__list">
+                                <li class="skill__list--item">Git et Git-hub</li>
+                                <li class="skill__list--item">Méthode AGILE / SCRUM</li>
                                 <li class="skill__list--item">Webmarketing</li>
                                 <li class="skill__list--item">Développement commercial</li>
                                 <li class="skill__list--item">Anglais courant</li>
                             </ul>
+                            <div class="skill__list__icons">
+                                <img src="assets/images/icon_symfony.png" class="skill__icon--item" alt="logo symfony">
+                                <img src="assets/images/icon_php.png" class="skill__icon--item" alt="logo php">
+                                <img src="assets/images/icon_MySQL.png" class="skill__icon--item" alt="logo mySQL">
+                                <img src="assets/images/icon_linux.png" class="skill__icon--item" alt="logo Linux">
+                            </div>
                         </div>
                     </div>
                     <!-- /SKILL-->
@@ -233,8 +269,8 @@
                 <div class="article__companies">
                     <!--EXPERIENCE-->
                     <div class="company__experience">
-                            <h5 class="experience__position">Chargé de marketing digital</h5>
-                            <span class="experience__company">@ Eminence</span>
+                        <h5 class="experience__position">Chargé de marketing digital</h5>
+                        <span class="experience__company">@ Eminence</span>
                         <p class="experience__time">Septembre 2018 à Septembre 2019</p>
                         <ul class="experience__list">
                             <li class="experience__item">Définition et mise en pratique de la stratégie digitale</li>
@@ -282,7 +318,7 @@
         </div>
         <!--/ARTICLE-->
     </main>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="footer__contact">
             <div class="contact__item">
                 <img src="assets/images/icon_phone.png" alt="téléphone" class="contact__item__pic">
@@ -296,17 +332,8 @@
             </div>
             <div class="contact__item">
                 <img src="assets/images/icon_geo.png" alt="adresse" class="contact__item__pic">
-                <h6 class="contact__item__title link--geo">Montpellier</h6>
+                <h6 class="contact__item__title link--geo">Montpellier et alentours</h6>
             </div>
-        </div>
-        <div class="footer__socials">
-            <h6>Retrouvez moi sur les réseaux sociaux ou téléchargez mon CV</h6>
-            <a href="https://github.com/Jeremybbl" target="_blank"><img src="assets/images/icon_github.png"
-                    class="socials__item"></img></a>
-            <a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my+boubal/" target="_blank"><img
-                    src="assets/images/icon_linkedin.png" class="socials__item"></img></a>
-            <a href="assets/files/CV Jérémy Boubal FR.pdf" download><img src="assets/images/icon_cv.png"
-                    class="socials__item"></img></a>
         </div>
     </footer>
 </body>

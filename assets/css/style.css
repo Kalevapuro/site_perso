@@ -41,15 +41,46 @@ h6 {
     color: #F4F4F4;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    padding: 1em, auto;
+    padding: 1em auto;
     border-bottom: 5px solid #038C94;
+}
+
+.header__title{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.header__socials{
+    display: flex;
+    justify-content: center;
 }
 
 .header__name,
 .header__job {
     margin: 0.1em auto;
+}
+
+.socials__item {
+    height: 2em;
+    width: auto;
+}
+
+.socials__item:hover {
+    background-color: #F4F4F4;
+}
+
+.anchor__link{
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #038C94;
+}
+
+.anchor__link:hover {
+    
+    color: #F4F4F4;
 }
 
 /* ARTICLE ( SECTION ) */
@@ -70,8 +101,14 @@ h6 {
     border-radius: 5px;
 }
 
+.article__main:hover {
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
 .article--intro{
-    margin-top: 8em;
+    margin-top: 10em;
 }
 
 .article__image img {
@@ -146,9 +183,7 @@ h6 {
     background-color: #F4F4F4;
 }
 
-.skill__wrapper{
-    position: relative;
-}
+
 
 .skill__content {
     margin: 2em auto;
@@ -161,13 +196,18 @@ h6 {
 }
 
 .skill__icon {
-    position: absolute;
-    left: 43.5%;
+    position: initial;
+    left: 45%;
     border: 0.2em solid #F4F4F4;
     border-radius: 1em;
     padding: 0.3em;
     margin: -2em auto 2em auto;
-    width: 10%;
+    width: 15%;
+}
+
+.skill__icon--item{
+    height: 40px;
+    width: auto;
 }
 
 .icon--back,
@@ -266,7 +306,7 @@ h6 {
     width: 0px;
     height: 0px;
     transform: rotate(45deg);
-    background-color: #4B5443;
+    background-color: #038C94;
 }
 
 .experience__time {
@@ -351,14 +391,7 @@ h6 {
     background-color: #252731;
 }
 
-.socials__item {
-    height: 2.5em;
-    width: auto;
-}
 
-.socials__item:hover {
-    background-color: #F4F4F4;
-}
 
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -369,7 +402,7 @@ h6 {
     }
 
     .footer__contact{
-        width: 80%;
+        width: 100%;
         flex-direction: row;
         justify-content: space-around;
     }
@@ -398,13 +431,12 @@ h6 {
         font-size: 1.5em;
     }
 
-    .project__item{
+    .project__item {
         flex-basis: 30%;
     }
 
-    .skill__wrapper{
+    .skills__wrapper {
         display: flex;
-        justify-content: space-around;
     }
 
     .skill__content{
@@ -445,7 +477,7 @@ h6 {
     }
 
     .footer__contact{
-        width: 50%;
+        width: 60%;
         flex-direction: row;
         justify-content: space-around;
     }
