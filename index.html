@@ -28,13 +28,16 @@
             <a href="" target="_blank"><img src="assets/images/icon_twitter.png" class="socials__item"></img></a>
         </div>
         <div class="header__anchor">
-            <a href="#footer" class="anchor__link">me contacter</a>
+
+            <button onclick="app.myScrollTo('projects__section');" class="anchor__link">Projets</button>
+            <button onclick="app.myScrollTo('skills__section');" class="anchor__link">Compétences</button>
+            <button onclick="app.myScrollTo('footer');" class="anchor__link">Contact</button>
         </div>
     </header>
 
     <main class="content">
         <!--ARTICLE-->
-        <div class="article__wrapper">
+        <div id="about__section" class="article__wrapper">
             <div class="article__main article--intro">
                 <h3 class="article__title">A propos</h3>
                 <h4 class="article__subtitle">Quelques mots sur moi</h4>
@@ -49,8 +52,10 @@
                     apportant mon savoir-faire nouvellement acquis et mon expérience éclectique.
                 </p>
             </div>
+            <div id="projects__section" class="anchor__div"></div>
         </div>
         <!--/ARTICLE-->
+
         <!--ARTICLE-->
         <div class="article__wrapper">
             <div class="article__main article--projects">
@@ -119,6 +124,7 @@
                     </section>
                 </div>
             </div>
+            <div id="skills__section" class="anchor__div"></div>
         </div>
         <!--/ARTICLE-->
         <!--ARTICLE-->
@@ -165,7 +171,8 @@
                                 <img src="assets/images/icon_html.png" class="skill__icon--item" alt="logo html">
                                 <img src="assets/images/icon_css.png" class="skill__icon--item" alt="logo css">
                                 <img src="assets/images/icon_js.png" class="skill__icon--item" alt="logo Javascript">
-                                <img src="assets/images/icon_bootstrap.png" class="skill__icon--item" alt="logo Bootstrap">
+                                <img src="assets/images/icon_bootstrap.png" class="skill__icon--item"
+                                    alt="logo Bootstrap">
                             </div>
                         </div>
                     </div>
@@ -193,6 +200,63 @@
                         </div>
                     </div>
                     <!-- /SKILL-->
+                </div>
+            </div>
+        </div>
+        <!--/ARTICLE-->
+
+        <!--ARTICLE-->
+        <div class="article__wrapper">
+            <div class="article__main article--experiences">
+                <h3 class="article__title">Expériences Pro</h3>
+                <h4 class="article__subtitle">Les derniers postes que j'ai occupés</h4>
+                <div class="article__companies">
+                    <!--EXPERIENCE-->
+                    <div class="company__experience">
+                        <h5 class="experience__position">Chargé de marketing digital</h5>
+                        <span class="experience__company">@ Eminence</span>
+                        <p class="experience__time">Septembre 2018 à Septembre 2019</p>
+                        <ul class="experience__list">
+                            <li class="experience__item">Définition et mise en pratique de la stratégie digitale</li>
+                            <li class="experience__item">Accompagnement dans toutes les étapes de la vie du produit et
+                                de la gamme de produits Eminence, de sa conception jusqu'à sa mise en vente</li>
+                            <li class="experience__item">Synthèse des études de marché</li>
+                            <li class="experience__item">Benchmarking et études conso</li>
+                        </ul>
+                    </div>
+                    <!--/EXPERIENCE-->
+                    <!--EXPERIENCE-->
+                    <div class="company__experience">
+                        <h5 class="experience__position">Country manager France</h5>
+                        <span class="experience__company">@ Eldes</span>
+                        <p class="experience__time">oct. 2014 à déc. 2017</p>
+                        <ul class="experience__list">
+                            <li class="experience__item">Préparation et mise en application des plans d'actions et
+                                marketing</li>
+                            <li class="experience__item">Animation du réseau de distribution</li>
+                            <li class="experience__item">Planification stratégique du développement régional</li>
+                            <li class="experience__item">Recherche et négociation de partenariat de distribution</li>
+                            <li class="experience__item">Responsable relation grands comptes</li>
+                            <li class="experience__item">Organisation d'événements ponctuels (salons, journées
+                                formation, journées découverte produit)</li>
+                        </ul>
+                    </div>
+                    <!--/EXPERIENCE-->
+                    <!--EXPERIENCE-->
+                    <div class="company__experience">
+                        <h5 class="experience__position">Commercial export France</h5>
+                        <span class="experience__company">@ AV Projektai</span>
+                        <p class="experience__time">Mai 2011 à févr. 2013</p>
+                        <ul class="experience__list">
+                            <li class="experience__item">Business development ( ouverture du marché français)</li>
+                            <li class="experience__item">Création et entretien de partenariats B2B</li>
+                            <li class="experience__item">Marketing opérationnel (Expos, rédactions d'articles,
+                                réalisation de prints)</li>
+                            <li class="experience__item">Gestion du service client</li>
+                            <li class="experience__item">Logistique</li>
+                        </ul>
+                    </div>
+                    <!--/EXPERIENCE-->
                 </div>
             </div>
         </div>
@@ -261,62 +325,6 @@
             </div>
         </div>
         <!--/ARTICLE-->
-        <!--ARTICLE-->
-        <div class="article__wrapper">
-            <div class="article__main article--experiences">
-                <h3 class="article__title">Expériences Pro</h3>
-                <h4 class="article__subtitle">Les derniers postes que j'ai occupés</h4>
-                <div class="article__companies">
-                    <!--EXPERIENCE-->
-                    <div class="company__experience">
-                        <h5 class="experience__position">Chargé de marketing digital</h5>
-                        <span class="experience__company">@ Eminence</span>
-                        <p class="experience__time">Septembre 2018 à Septembre 2019</p>
-                        <ul class="experience__list">
-                            <li class="experience__item">Définition et mise en pratique de la stratégie digitale</li>
-                            <li class="experience__item">Accompagnement dans toutes les étapes de la vie du produit et
-                                de la gamme de produits Eminence, de sa conception jusqu'à sa mise en vente</li>
-                            <li class="experience__item">Synthèse des études de marché</li>
-                            <li class="experience__item">Benchmarking et études conso</li>
-                        </ul>
-                    </div>
-                    <!--/EXPERIENCE-->
-                    <!--EXPERIENCE-->
-                    <div class="company__experience">
-                        <h5 class="experience__position">Country manager France</h5>
-                        <span class="experience__company">@ Eldes</span>
-                        <p class="experience__time">oct. 2014 à déc. 2017</p>
-                        <ul class="experience__list">
-                            <li class="experience__item">Préparation et mise en application des plans d'actions et
-                                marketing</li>
-                            <li class="experience__item">Animation du réseau de distribution</li>
-                            <li class="experience__item">Planification stratégique du développement régional</li>
-                            <li class="experience__item">Recherche et négociation de partenariat de distribution</li>
-                            <li class="experience__item">Responsable relation grands comptes</li>
-                            <li class="experience__item">Organisation d'événements ponctuels (salons, journées
-                                formation, journées découverte produit)</li>
-                        </ul>
-                    </div>
-                    <!--/EXPERIENCE-->
-                    <!--EXPERIENCE-->
-                    <div class="company__experience">
-                        <h5 class="experience__position">Commercial export France</h5>
-                        <span class="experience__company">@ AV Projektai</span>
-                        <p class="experience__time">Mai 2011 à févr. 2013</p>
-                        <ul class="experience__list">
-                            <li class="experience__item">Business development ( ouverture du marché français)</li>
-                            <li class="experience__item">Création et entretien de partenariats B2B</li>
-                            <li class="experience__item">Marketing opérationnel (Expos, rédactions d'articles,
-                                réalisation de prints)</li>
-                            <li class="experience__item">Gestion du service client</li>
-                            <li class="experience__item">Logistique</li>
-                        </ul>
-                    </div>
-                    <!--/EXPERIENCE-->
-                </div>
-            </div>
-        </div>
-        <!--/ARTICLE-->
     </main>
     <footer id="footer" class="footer">
         <div class="footer__contact">
@@ -336,6 +344,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
