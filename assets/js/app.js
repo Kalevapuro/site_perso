@@ -1,7 +1,9 @@
 app = {
 
   init:function(){
+
     console.log("coucou")
+    
   },
 
   // Scroll to anchors

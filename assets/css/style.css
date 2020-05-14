@@ -259,12 +259,12 @@ h6 {
     font-size: 1em;
 }
 
-.skill__list {
+.skill__list, .exp__description--list {
     list-style-type: none;
     padding: 0;
 }
 
-.skill__list--item {
+.skill__list--item, .list--item {
     margin-bottom: 0.3em;
 }
 
@@ -397,11 +397,6 @@ h6 {
     background-color: #252731;
 }
 
-.article__wrapper {
-    width: 75%;
-    margin: auto;
-}
-
 .footer__contact {
     width: 100%;
     flex-direction: row;
@@ -413,7 +408,7 @@ h6 {
 }
 
 .skill__title {
-    margin-top: 4em;
+    margin-top: 1em;
 }
 
 .project__item {
