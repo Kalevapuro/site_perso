@@ -1,11 +1,5 @@
 app = {
 
-  init:function(){
-
-    console.log("coucou")
-    
-  },
-
   // Scroll to anchors
   myLastScrollTo: function(id)  {
     let e = document.getElementById(id);
@@ -22,7 +16,5 @@ app = {
     setTimeout("app.myLastScrollTo('" + id + "')", 500);
   }
 }
-
-app.init();
 
 // 

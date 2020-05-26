@@ -136,50 +136,67 @@ h6 {
 
 /* PROJECTS SECTION */
 
-.project__list {
-    display: flex;
-    list-style-type: none;
-    overflow-x: scroll;
-    padding: 1em 2em;
-    scroll-snap-type: x mandatory;
+/* CAROUSEL JS */
+.carousel {
+    position: relative;
 }
+
+.carousel__container {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.carousel__item {
+    float: left;
+}
+
+.carousel__next,
+.carousel__prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFF url(../images/next.svg) center center no-repeat;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    right: -20px;
+    box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.carousel__next:hover,
+.carousel__prev:hover{
+transform: scale(1.2);
+}
+
+
+.carousel__prev {
+    right: auto;
+    left: -20px;
+    background: #FFF url(../images/prev.svg) center center no-repeat;
+}
+
+/* /CAROUSEL JS */
+
 
 .project__link {
     text-decoration: none;
 }
 
-::-webkit-scrollbar-track {
-    background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar {
-    height: 6px;
-    background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #3d4852;
-    border-radius: 3px;
-}
-
-.project__item {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 90%;
-    scroll-snap-align: center;
-    margin: 0 3em 0 0;
-}
-
 .project__card {
     background-color: #3F4253;
-    box-shadow: 40px -15px teal;
     color: whitesmoke;
-    padding: 2px;
+    transition: transform 0.3s;
+}
 
+.project__card:hover {
+    transform: translate3d(0, -10px, 0);
 }
 
 .project__img {
-    width: 90%;
+    width: 85%;
     height: auto;
 }
 
@@ -259,12 +276,14 @@ h6 {
     font-size: 1em;
 }
 
-.skill__list, .exp__description--list {
+.skill__list,
+.exp__description--list {
     list-style-type: none;
     padding: 0;
 }
 
-.skill__list--item, .list--item {
+.skill__list--item,
+.list--item {
     margin-bottom: 0.3em;
 }
 
@@ -411,9 +430,6 @@ h6 {
     margin-top: 1em;
 }
 
-.project__item {
-    flex-basis: 60%;
-}
 
 @media screen and (min-width: 1024px) {
 
@@ -424,10 +440,6 @@ h6 {
 
     .article__text {
         font-size: 1.5em;
-    }
-
-    .project__item {
-        flex-basis: 30%;
     }
 
     .skills__wrapper {
