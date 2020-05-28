@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     background-attachment: fixed;
+
 }
 
 h3 {
@@ -139,9 +140,15 @@ h6 {
 /* CAROUSEL JS */
 .carousel {
     position: relative;
+    overflow: hidden;
 }
 
 .carousel__container {
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel__container:after {
     content: '';
     clear: both;
     display: table;
@@ -156,30 +163,37 @@ h6 {
     position: absolute;
     width: 40px;
     height: 40px;
-    background: #FFF url(../images/next.svg) center center no-repeat;
+    background: #FFF url(../images/next.png) center center no-repeat;
     border-radius: 50%;
     top: 50%;
     margin-top: -20px;
-    right: -20px;
+    right: 3%;
     box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
 }
-
-.carousel__next:hover,
-.carousel__prev:hover{
-transform: scale(1.2);
-}
-
 
 .carousel__prev {
     right: auto;
-    left: -20px;
-    background: #FFF url(../images/prev.svg) center center no-repeat;
+    left: 3%;
+    background: #FFF url(../images/prev.png) center center no-repeat;
 }
 
-/* /CAROUSEL JS */
+.carousel__next:hover,
+.carousel__prev:hover {
+    transform: scale(1.2);
+}
 
+.carousel__next--hidden,
+.carousel__prev--hidden {
+    opacity: 0;
+}
+
+
+/* /CAROUSEL JS */
+.project__wrapper {
+    padding: 1em;
+}
 
 .project__link {
     text-decoration: none;
@@ -189,6 +203,8 @@ transform: scale(1.2);
     background-color: #3F4253;
     color: whitesmoke;
     transition: transform 0.3s;
+    margin: 0 1em;
+    padding: 1em;
 }
 
 .project__card:hover {
