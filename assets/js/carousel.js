@@ -14,14 +14,19 @@ class Carousel {
    * @param {Object} options
    * @param {Object} [options.slidesToScroll=1] Nombre d'éléments à faire défiler
    * @param {Object} [options.slidesVisible=1] Nombre d'éléments visibles dans un slide
-   * @param {boolean} [options.loop=false] Doit-on boucler en fin de slides
+   * @param {boolean} [options.loop=false] Boucler en fin de carousel
+   * @param {boolean} [options.pagination=false] Afficher la pagination
+   * @param {boolean} [options.navigation=true] Afficher les boutons de la navigation
+
    */
   constructor(element, options = {}) {
     this.element = element;
     this.options = Object.assign({}, {
         slidesToScroll: 1,
         slidesVisible: 1,
-        loop: false
+        loop: false,
+        pagination: false,
+        navigation: true
       },
       options);
     let children = [].slice.call(element.children);
@@ -42,7 +47,13 @@ class Carousel {
       return item;
     });
     this.setStyle();
-    this.createNavigation();
+    if (this.options.navigation) {
+      this.createNavigation();
+    }
+
+    if (this.options.pagination) {
+      this.createPagination();
+    }
 
     // Events
     this.moveCallbacks.forEach(cb => cb(0));
@@ -91,6 +102,24 @@ class Carousel {
     })
   }
 
+  createPagination() {
+    let pagination = this.createDivWithClass('carousel__pagination');
+    let buttons = [];
+    this.root.appendChild(pagination);
+    for ( let i = 0; i < this.items.length; i = i + this.options.slidesToScroll){
+      let button = this. createDivWithClass('carousel__pagination__button');
+      button.addEventListener('click', () => this.goToItem(i));
+      pagination.appendChild(button);
+      buttons.push(button);
+    }
+    this.onMove(index => {
+      let activeButton = buttons[Math.floor(index / this.options.slidesToScroll)];
+      if (activeButton) {
+        buttons.forEach(button => button.classList.remove('carousel__pagination__button--active'));
+        activeButton.classList.add('carousel__pagination__button--active');
+      }
+    })
+  }
 
   next() {
     this.goToItem(this.currentItem + this.slidesToScroll);
@@ -113,7 +142,7 @@ class Carousel {
       } else {
         return;
       }
-      
+
     } else if (index >= this.items.length || (this.items[this.currentItem + this.slidesVisible] === undefined && index > this.currentItem)) {
 
       if (this.options.loop) {
@@ -137,7 +166,7 @@ class Carousel {
   }
 
   onWindowResize() {
-    let mobile = window.innerWidth < 800;
+    let mobile = window.innerWidth < 1024;
     if (mobile !== this.isMobile) {
       this.isMobile = mobile;
       this.setStyle();
@@ -170,11 +199,16 @@ class Carousel {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+let onReady = function () {
 
   new Carousel(document.getElementById('project__carousel'), {
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     slidesVisible: 2,
-    loop: false
+    loop: false,
+    pagination: true
   })
-})
+}
+if (document.readyState !== 'loading'){
+  onReady();
+}
+document.addEventListener("DOMContentLoaded", onReady)

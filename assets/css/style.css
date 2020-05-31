@@ -141,6 +141,7 @@ h6 {
 .carousel {
     position: relative;
     overflow: hidden;
+    padding: 1em
 }
 
 .carousel__container {
@@ -187,6 +188,32 @@ h6 {
 .carousel__next--hidden,
 .carousel__prev--hidden {
     opacity: 0;
+}
+
+.carousel__pagination {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.carousel__pagination__button {
+    background-color: #3F4253;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 3px;
+    box-shadow: 0 2px 5px #3232321a;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.carousel__pagination__button--active, 
+.carousel__pagination__button:hover {
+    transform: scale(1.4);
 }
 
 
@@ -507,5 +534,9 @@ h6 {
 
     .footer__socials {
         width: 55%;
+    }
+
+    .carousel__pagination {
+        display: block;
     }
 }
