@@ -79,6 +79,7 @@ h6 {
     color: #038C94;
     background-color: #3F4253;
     border: none;
+    cursor: pointer;
 }
 
 .anchor__div {
