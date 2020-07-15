@@ -94,9 +94,8 @@ h6 {
 
 /* ARTICLE ( SECTION ) */
 
-
 .article__wrapper {
-    margin: 2em 0;
+    margin: 2em auto;
 }
 
 .article__main {
@@ -351,7 +350,6 @@ h6 {
 
 .skill__title {
     display: block;
-    margin-top: 2.5em;
     font-size: 1em;
 }
 
@@ -503,16 +501,30 @@ h6 {
     background-color: #252731;
 }
 
+@media screen and (min-width: 600px) {
+    .article__wrapper {
+        width: 75%;
+        margin: auto;
+    }
 
-
-.skill__content {
-    width: 300px;
-}
+    .footer__contact {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
 .skill__title {
     margin-top: 1em;
 }
 
+    .skill__content {
+        width: 300px;
+    }
+
+    .project__item {
+        flex-basis: 60%;
+    }
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -532,6 +544,9 @@ h6 {
     .skill__content {
         width: 30%;
         max-width: 20em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .skill__icon {
