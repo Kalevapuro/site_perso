@@ -118,6 +118,7 @@ h6 {
 
 .article--intro {
     margin-top: 10em;
+    padding-bottom: 2em;
 }
 
 .article__image img {
@@ -224,11 +225,41 @@ h6 {
 }
 
 .project__link {
+    color: white;
+}
+
+.project__link:hover {
     text-decoration: none;
+    font-weight: bold;
+}
+
+.img__wrap {
+    position: relative;
+}
+
+.img__description{
+    padding-top: 20%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
 }
 
 .project__card {
     background-color: #3F4253;
+    border-radius: 5px;
     color: whitesmoke;
     transition: transform 0.3s;
     margin: 0 1em;
@@ -240,8 +271,12 @@ h6 {
 }
 
 .project__img {
-    width: 85%;
     height: auto;
+    width: 100%;
+}
+
+.card__content a {
+    color: white;
 }
 
 /* SKILL SECTION */
@@ -324,6 +359,14 @@ h6 {
 .exp__description--list {
     list-style-type: none;
     padding: 0;
+}
+
+.exp__description--list .list--item{
+    background-color: #038C94;
+    padding: 0.3em;
+    color: white;
+    border-radius: 5px;
+    margin: 0.3em 3em;
 }
 
 .skill__list--item,
@@ -460,11 +503,7 @@ h6 {
     background-color: #252731;
 }
 
-.footer__contact {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-}
+
 
 .skill__content {
     width: 300px;
